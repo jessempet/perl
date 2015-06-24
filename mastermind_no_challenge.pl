@@ -80,6 +80,11 @@ while ($red != 4)
 		#setting red to 0 to prevent more than 4 flags from occurring
 		$red = 0;
 	}
+	elsif ($white == 0 && $red == 0)
+	{
+		#if there are no matches 
+		say "No Matches";
+	}
 	else
 	{
 		#Clearing white AND red to recount on next guess
