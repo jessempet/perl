@@ -24,11 +24,24 @@ while ($red != 4)
 	my $guess = <>;
 	chomp($guess);
 	
+
+		
 	#Post-incrementing the number of guesses to tally them
 	#And splitting them in to elements of an array
 	$num_guesses++;
 	my @guess_array = split('',$guess);
 
+	if (scalar @guess_array < 4)
+	{
+		say "You have entered an invalid length of a guess";
+		print "Guess a number(no duplicates): ";
+		my $guess = <>;
+        	chomp($guess);
+		my @guess_array = split('',$guess);
+	
+	}
+	else 
+	{
 	#Lopping through each element in guesses array
 	foreach my $element (@guess_array)
 	{
@@ -51,7 +64,7 @@ while ($red != 4)
 		}
 		$index++;
 	}
-
+	}
 	#independent of looping through each element, need to display
 	#certain output based on number of flags
 	if ($red == 0 && $white >0)
