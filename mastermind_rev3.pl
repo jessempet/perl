@@ -67,7 +67,7 @@ while ($red != 4)
 	}
 	# Independent of looping through each element, need to display
 	# Certain output based on number of flags
-	if ($red == 0 && $white >0 && scalar @guess_array == 4)
+	if ($red == 0 && $white >0)
 	{
 		say "$white white";
 		#need to set the white flag back to 0 so flags don't add over 4
@@ -88,13 +88,13 @@ while ($red != 4)
 			say "The code was @code!";
 		}
 	}
-	elsif ($white ==0 && $red >0 && scalar @guess_array == 4)
+	elsif ($white ==0 && $red >0)
 	{
 		say "$red red";
 		# Setting red to 0 to prevent more than 4 flags from occurring
 		$red = 0;
 	}
-	elsif ($white == 0 && $red == 0 && scalar @guess_array == 4)
+	elsif ($white == 0 && $red == 0)
 	{
 		# If there are no matches 
 		say "No Matches";
